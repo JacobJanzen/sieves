@@ -26,7 +26,8 @@
     (setq i (+ i 1)))
 
   ;; follow sieve of eratosthenes algorithm to fill sieve
-  (while (< i max-val)
+  (setq top (sqrt max-val))
+  (while (< i top)
     (when (aref sieve i)
       (setq j (+ i i))
       (while (< j max-val)
